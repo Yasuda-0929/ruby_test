@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ファッション</title>
+  <link rel="stylesheet" href="fashion.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<div class="header2">
+
+    <div class="row2">
+     <h1 class="title2">fashion　snap</h1>
+       <div class="home-menu">
+        <button class="home-btn" aria-label="ホームに移動">
+         <i class="material-icons">menu</i>
+        </button>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <div class="home-content">
+        　　<a href="<%= hello_path %>"> TOPページ</a>
+            <a href="<%= movies_path %>"> 映画一覧</a>
+            <a href="<%= movies_fashion_path %>">ファッション</a>
+            <a href="#"> お気に入り</a>
+            <a href="#"> お知らせ</a>
+        </div>
+       </div>
+    </div>
+</div>
+
+<body>
+
+
+  <main class="pinterest-gallery">
+<div class="snap-card パルプフィクション" data-title="Pulp fiction">
+  <button class="like-button">❤️ <span class="like-count">0</span></button>
+</div>
+
+<div class="snap-card プリティウーマン" data-title="Pretty Women"></div>
+<div class="snap-card PoeticJustice" data-title="poetic justice"></div>
+<div class="snap-card FearAndLoathingInLasVegas" data-title="Fear and Loathing in Las Vegas"></div>
+<div class="snap-card TheMatrix" data-title="The Matrix"></div>
+<div class="snap-card Clueless" data-title="Clueless"></div>
+<div class="snap-card FightClub" data-title="Fight Club"></div>
+<div class="snap-card Dazed-and-Confused" data-title="Dazed and Confused"></div>
+<div class="snap-card The-Craft" data-title="The Craft"></div>
+<div class="snap-card Juice" data-title="Juice"></div>
+<div class="snap-card The-Doom-Generation" data-title="The-Doom-Generation"></div>
+<div class="snap-card Girls-Town" data-title="Girls Town"></div>
+<div class="snap-card プラダを着た悪魔" data-title="プラダを着た悪魔"></div>
+<div class="snap-card mid90s" data-title="mid90s"></div>
+<div class="snap-card snatch" data-title="snatch"></div>
+<div class="snap-card skate-kitchen" data-title="skate kitchen"></div>
+<div class="snap-card empire-records" data-title="empire records"></div>
+<div class="snap-card Trainspotting" data-title="Trainspotting"></div>
+<div class="snap-card ghost-world" data-title="ghost world"></div>
+<div class="snap-card エイトmile" data-title="8mile"></div>
+
+
+  </main>
+<script>
+document.querySelectorAll('.like-button').forEach(button => {
+  const card = button.closest('.snap-card');
+  const key = 'like-' + card.classList[1]; // 例: like-tiffany
+  const countSpan = button.querySelector('.like-count');
+  
+  // 初期値の設定（ローカルストレージから）
+  let liked = localStorage.getItem(key) === 'true';
+  let count = parseInt(localStorage.getItem(key + '-count')) || 0;
+  
+  if (liked) {
+    button.classList.add('liked');
+  }
+  countSpan.textContent = count;
+
+  button.addEventListener('click', () => {
+    liked = !liked;
+    button.classList.toggle('liked', liked);
+    
+    count += liked ? 1 : -1;
+    count = Math.max(count, 0); // マイナスにならないように
+
+    countSpan.textContent = count;
+
+    // 状態を保存
+    localStorage.setItem(key, liked);
+    localStorage.setItem(key + '-count', count);
+  });
+});
+</script>
+<div id="like-ranking">
+  <h2>📈 人気ランキング</h2>
+  <ol id="ranking-list"></ol>
+</div>
+<script>
+function updateRanking() {
+  const rankingList = document.getElementById('ranking-list');
+  const cards = document.querySelectorAll('.snap-card');
+  const cardData = [];
+
+  cards.forEach(card => {
+    const className = card.classList[1]; // 例: tiffany
+    const key = 'like-' + className;
+    const count = parseInt(localStorage.getItem(key + '-count')) || 0;
+    const title = card.dataset.title;
+
+    cardData.push({ title, count });
+  });
+
+  // いいね数が多い順にソート
+  cardData.sort((a, b) => b.count - a.count);
+
+  // 表示を更新
+  rankingList.innerHTML = '';
+  cardData.slice(0, 5).forEach(item => {
+    const li = document.createElement('li');
+    li.textContent = `${item.title}（❤️ ${item.count}）`;
+    rankingList.appendChild(li);
+  });
+}
+
+// 初回表示時
+updateRanking();
+
+// いいねボタンを押すたびに更新
+document.querySelectorAll('.like-button').forEach(button => {
+  button.addEventListener('click', updateRanking);
+});
+</script>
+</body>
+</html>
+

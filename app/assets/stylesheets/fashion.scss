@@ -1,0 +1,193 @@
+
+body {
+  font-family: "Helvetica", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #111;
+  color: #fff;
+  background-image:  url("eigakan2.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header2 {
+  background-color: rgb(3, 3, 3);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border: 1px solid rgb(108, 105, 105); /* 白い枠線を追加 */
+}
+.row2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+.title2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.pinterest-gallery {
+  column-count: 4;
+  column-gap: 1.5rem;
+  padding-top: 30px;
+}
+
+.snap-card {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 2 / 3;
+  background-size: cover;
+  background-position: center;
+  break-inside: avoid;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  background-color: #817d7d;
+}
+
+.snap-card::before {
+  content: attr(data-title);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  color: #fff;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+}
+
+.snap-card:hover::before {
+  opacity: 1;
+}
+
+.snap-card:hover {
+  transform: scale(1.02);
+}
+
+.like-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.like-button.liked {
+  color: red;
+}
+#like-ranking {
+  margin: 2em 0;
+  padding: 1em;
+  background-color: #8e8d8d;
+  border-radius: 10px;
+  max-width: 400px;
+}
+
+#like-ranking h2 {
+  margin-bottom: 0.5em;
+}
+
+#ranking-list li {
+  margin: 0.3em 0;
+  font-weight: bold;
+}
+
+/* === 背景画像をクラスで管理 === */
+.snap-card.パルプフィクション {
+  background-image: url("パルプフィクション1.jpg");
+}
+
+.snap-card.プリティウーマン {
+  background-image: url("プリティーウーマン1.jpg");
+}
+
+.snap-card.PoeticJustice {
+  background-image: url("poetic justice1.jpg");
+}
+
+.snap-card.FearAndLoathingInLasVegas {
+  background-image: url('Fear and Loathing in Las Vegas1.jpg');
+}
+
+.snap-card.TheMatrix {
+  background-image: url('The Matrix1.jpg');
+}
+
+.snap-card.Clueless {
+  background-image: url('Clueless1.jpg');
+}
+
+.snap-card.FightClub {
+  background-image: url('Fight Club1.jpg');
+}
+
+.snap-card.Dazed-and-Confused {
+  background-image: url('Dazed and Confused1.jpg');
+}
+
+.snap-card.The-Craft {
+  background-image: url('The Craft1.jpg');
+}
+
+.snap-card.Juice {
+  background-image: url('Juice1.jpg');
+}
+
+.snap-card.The-Doom-Generation {
+  background-image: url('The-Doom-Generation1.jpg');
+}
+
+.snap-card.Girls-Town {
+  background-image: url('Girls-Town1.jpg');
+}
+
+.snap-card.プラダを着た悪魔 {
+  background-image: url('プラダを着た悪魔1.jpg');
+}
+
+.snap-card.mid90s {
+  background-image: url('mid90s1.jpg');
+}
+
+.snap-card.snatch {
+  background-image: url('snatch1.jpg');
+}
+
+.snap-card.skate-kitchen {
+  background-image: url('Skate Kitchen1.jpg');
+}
+
+.snap-card.empire-records {
+  background-image: url('empire records1.jpg');
+  background-size: cover;
+  background-position: left center;
+}
+
+.snap-card.Trainspotting {
+  background-image: url('Trainspotting1.jpg');
+}
+
+.snap-card.ghost-world {
+  background-image: url('ghost world1.jpg');
+}
+
+.snap-card.エイトmile {
+  background-image: url('8mile1.jpg');
+}
+

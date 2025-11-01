@@ -1,0 +1,142 @@
+<!DOCTYPE html> <!--　この文章がHTML文章であることを伝える要素です。-->
+<html lang="ja"><!--言語の指定-->
+  <head><!--ページに表示されない情報(サイトの裏側の設定)-->
+    <meta charset="utf-8">
+    <title>練習</title><!--ブラウザのタブのタイトルを指定-->
+    
+  </head>
+
+ 
+
+
+  <header>
+     <div class="row">
+       <a href="" class="logo">MOVIES</a>
+       <div class="home-menu">
+        <button class="home-btn" aria-label="ホームに移動">
+         <i class="material-icons">menu</i>
+        </button>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <div class="home-content">
+            <a href="<%= hello_path %>"> TOPページ</a>
+            <a href="<%= movies_path %>"> 映画一覧</a>
+            <a href="<%= movies_fashion_path %>">ファッション</a>
+            <a href="#"> お気に入り</a>
+            <a href="#"> お知らせ</a>
+        </div>
+    </div>
+    </div>
+  </header>
+<body>
+  <main>
+    <section class="main_visual">
+      <div class="container">
+        <div class="title">
+          <h1>What's the beast inside you running on?</h1>
+          <p>Cinematic Fashion Snaps</p>
+        </div>   
+      </div>
+      <div class="purple"></div>
+    </section>
+    <div class="introduction">
+        <h1>絶対ハマる“面白い洋画”のおすすめ特集！</h1>
+        <h2>筆者が実際に観た、おすすめ海外映画を紹介</h2>
+        <p>このサイトでは、不朽の名作から最新映画まで、絶対に観ておきたい海外映画の名作を厳選して紹介します。<br>
+        アクション、ドラマ、SF、ホラーなど多ジャンルの中から、<br>
+        筆者自身が実際に観て感動した作品のみをピックアップ。<br>
+        一般的な映画情報サイトでは見つけられない、傑作をお届けします。<br>
+        新たなお気に入り映画との出会いを楽しんでください！</p>
+    </div>
+    
+  </main>
+
+  <div class="osusume">
+     <h1>特におすすめTOP5</h1>
+  </div>
+  <div class="movie-container">
+    <div class="movie-card">
+        <div class="movie-image"></div>
+        <div class="movie-info">
+            <h2 class="movie-title">LEON</h2>
+            <p class="movie-subtitle">INTEGRAL VERSION</p>
+            <p class="movie-date">1994年　フランス</p>
+            <p class="movie-description">
+                ニューヨークで静かに暮らす殺し屋レオンは、ある日、家族を殺された12歳の少女マチルダと出会う。<br>
+                彼女は復讐を誓い、レオンに殺しの技術を教えてほしいと懇願する。<br>
+                しかし、彼らを狙う冷酷な麻薬捜査官スタンスフィールドの影が迫る――。<br><br>
+                クールなアクションと切なくも美しいドラマが絡み合う、唯一無二の名作。
+            </p>
+            <button class="notify-btn">🔔 配信日に通知</button>
+        </div>
+    </div>
+
+    <div class="movie-card2">
+        <div class="movie-image2"></div>
+        <div class="movie-info2">
+            <h2 class="movie-title2">PRISON BREAK</h2>
+            <p class="movie-subtitle2"></p>
+            <p class="movie-date2">2005年　アメリカ</p>
+            <p class="movie-description2">
+                天才的な頭脳を持つマイケル・スコフィールドは、無実の罪で死刑を宣告された兄リンカーンを救うため、彼自身が刑務所に入るという大胆な計画を実行する。<br><br>
+                刑務所内には凶悪な囚人たちがひしめき合い、監視の目が光る中、マイケルは自らの体に刻まれた“ある秘密”を頼りに脱獄計画を進めていく。<br>
+                スリリングな展開と巧妙な伏線、そして絶体絶命の状況からの衝撃的な逆転劇が魅力の本作。<br><br>
+                一度観たら止まらない、究極の脱獄サスペンスをぜひ体感してほしい。
+            </p>
+            <button class="notify-btn2">🔔 配信日に通知</button>
+        </div>
+    </div>
+
+    <div class="movie-card3">
+        <div class="movie-image3"></div>
+        <div class="movie-info3">
+            <h2 class="movie-title3">THE DEPARTED</h2>
+            <p class="movie-subtitle3"></p>
+            <p class="movie-date3">2005年　アメリカ</p>
+            <p class="movie-description3">
+               マーティン・スコセッシ監督が手がけた、警察とマフィア、それぞれに潜入したスパイの壮絶な駆け引きを描くクライム・サスペンス。<br><br>
+            ボストン警察は、マフィア組織に潜入させた若き警官ビリーを送り込む。一方、マフィアもまた警察に内通者コリンを送り込み、組織内で暗躍させていた。<br>
+            互いの正体を暴こうとする攻防が続く中、やがて衝撃の結末へと向かう――。<br><br>
+            レオナルド・ディカプリオ、マット・デイモン、ジャック・ニコルソンら豪華キャストが共演する、息もつかせぬ心理戦を見逃すな！
+            </p>
+            <button class="notify-btn3">🔔 配信日に通知</button>
+        </div>
+    </div>
+    
+    <div class="movie-card4">
+    <div class="movie-image4"></div>
+    <div class="movie-info4">
+        <h2 class="movie-title4">night on the planet</h2>
+        <p class="movie-subtitle4">1991年　アメリカ</p>
+        <p class="movie-date4"></p>
+        <p class="movie-description4">
+           ジム・ジャームッシュ監督による、五つの異なる都市で繰り広げられる夜の物語。<br><br>
+           ロサンゼルス、ニューヨーク、パリ、ローマ、ヘルシンキの5都市で、タクシー運転手と乗客との間で展開されるドラマが描かれます。<br>
+           各都市で異なるキャラクターが登場し、都市と人々を繋げる共通のテーマが浮かび上がる。<br><br>
+           ジャームッシュ独特のユーモアと詩的な雰囲気が漂う、夜の都市をテーマにした作品です。
+        </p>
+        <button class="notify-btn4">🔔 配信日に通知</button>
+    </div>
+</div>
+</div>
+</body>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-left">
+            <p>© 2025 サイト名. All Rights Reserved.</p>
+        </div>
+        <div class="footer-center">
+            <ul>
+                <li><a href="#">ホーム</a></li>
+                <li><a href="#">映画一覧</a></li>
+                <li><a href="#">お問い合わせ</a></li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <ul>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</html>
+

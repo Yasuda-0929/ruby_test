@@ -1,0 +1,367 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  box-sizing: border-box;
+  background-color: black;
+  padding-top: 70px; /* ヘッダーの高さ分の余白を追加 */
+   
+}
+
+
+header {
+  padding: 20px 0;
+  background-color: rgb(3, 3, 3);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border: 1px solid rgb(108, 105, 105); /* 白い枠線を追加 */
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+.logo {
+  font-size: 36px;
+  font-weight: bold;
+  color: #ff7206;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+/* ホームボタン */
+.home-btn {
+  background-color: #333;   /* ダークグレーの背景色 */
+    color: white;             /* 白い文字色 */
+    border: none;
+    padding: 12px 20px;       /* ボタンのパディング */
+    font-size: 16px;          /* テキストサイズ */
+    cursor: pointer;
+    border-radius: 25px;      /* 丸みを帯びた角 */
+    display: flex;
+    align-items: center;      /* アイコンとテキストを中央揃え */
+    transition: all 0.3s ease; /* ホバー時のアニメーション */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* シャドウを追加 */
+}
+
+/* ホームボタンのホバー効果 */
+.home-btn:hover {
+  background-color: #ff7f50; /* オレンジ色のホバー背景 */
+    transform: translateY(-2px); /* ボタンが浮き上がるようなエフェクト */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* ホバー時のシャドウ強化 */
+}
+
+
+/* ホームメニュー */
+.home-menu {
+  position: relative;
+  margin-left: auto; /* 右側に配置 */
+}
+
+/* ホームのコンテンツ（デフォルトは非表示） */
+.home-content {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  min-width: 150px;
+  overflow: hidden;
+  z-index: 10;
+  margin-top: 0px;
+}
+
+/* メニュー項目 */
+.home-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+
+/* メニュー項目のホバー効果 */
+.home-content a:hover {
+  background-color: #ddd;
+}
+
+/* ホームボタンをクリックしたらメニューを表示 */
+.home-menu:hover .home-content {
+  display: block;
+}
+
+.main_visual {
+  background-image: url("sushi.jpg");
+  background-size: cover;
+  background-position: center top;
+  position: relative;
+  
+
+}
+.main_visual .container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1280px;
+  height: 640px;
+  position: relative;
+
+}
+.main_visual .title{
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  z-index: 2;
+  
+}
+.main_visual h1{
+  font-size: 70px;
+  font-weight: 700;
+  color: aliceblue;
+  margin-bottom: 24px;
+}
+.main_visual p{
+  font-size: 24px;
+  font-weight: 900;
+  color: aliceblue;
+}
+.main_visual .purple{
+  background-color: rgb(47, 46, 46);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  mix-blend-mode: multiply;
+  border: 1.5px solid rgb(140, 138, 138); /* 白い枠線を追加 */
+
+}
+.introduction {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  padding-left: 200px;
+}
+.introduction h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+.introduction h2 {
+  font-size: 24px;
+  color: #ff4500;
+}
+.introduction p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ccc;
+}
+.osusume {
+    background-color: rgb(37, 37, 37);
+    width: 100%;
+    border: 1px solid rgb(95, 95, 94); 
+    font-size: 15px;
+    margin: 0%;
+}
+
+.osusume h1 {
+    margin: 5px;
+}
+/* 横スクロールを有効化 */
+.movie-container {
+  display: flex; /* 横並びにする */
+  overflow-x: auto; /* 横スクロールを有効化 */
+  white-space: nowrap; /* 折り返し防止 */
+  gap: 5px; /* カードの間隔 */
+  scrollbar-width: thin;
+  scrollbar-color: #888 #202021; /* スクロールバーの色 */
+}
+
+
+/* スクロールバーのスタイル（Chrome, Edge, Safari対応） */
+.movie-container::-webkit-scrollbar {
+  height: 8px; /* スクロールバーの高さ */
+}
+
+.movie-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.movie-container::-webkit-scrollbar-track {
+  background: #202021;
+}
+
+/* 映画カード共通 */
+.movie-card, .movie-card2, .movie-card3, .movie-card4 { 
+  background-color: #000000;
+  margin: 10px;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 850px;
+  height: 650px;
+  text-align: center;
+  display: flex; /* 横並び */
+  flex-direction: column; /* 縦並びに */
+  flex: 0 0 auto; /* 横幅を固定 */
+  border: 0.5px solid white; /* 白い枠線を追加 */
+}
+
+/* 画像のパス */
+.movie-image {
+  width: 100%;  
+  height: 50%; /* 高さは全体と同じ */
+  background-image: url("leon1.jpg"); /* 画像のパス */
+  background-position: top center; /* 上に配置 */
+  background-size: cover;
+  
+}
+
+.movie-image2 {
+  width: 100%;  /* 左側半分を占める */
+  height: 50%; /* 高さは全体と同じ */
+  background-image: url("prisonbreak2.jpg"); /* 画像のパス */
+  background-position: top center; /* 上に配置 */
+  background-size: cover;
+}
+
+.movie-image3 {
+  width: 100%;  /* 左側半分を占める */
+  height: 50%; /* 高さは全体と同じ */
+  background-image: url("departed2.jpg"); /* 画像のパス */
+  background-position: top center; /* 上に配置 */
+  background-size: cover;
+}
+.movie-image4 {
+  width: 100%;  /* 左側半分を占める */
+  height: 50%; /* 高さは全体と同じ */
+  background-image: url("ナイトオンザプラネット１.jpg"); /* 画像のパス */
+  background-position: top center; /* 上に配置 */
+  background-size: cover;
+}
+/* 映画情報部分（共通） */
+.movie-info, .movie-info2, .movie-info3, .movie-info4 {
+  padding: 7.5px;
+  text-align: left; /* 左寄せ */
+  flex: 1;
+  margin-top: 20%;
+}
+
+/* タイトル */
+.movie-title, .movie-title2, .movie-title3, .movie-title4 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: -200px;
+  color: #b40d0d;
+}
+
+/* Prison Break のタイトルカラー */
+.movie-title2 {
+  color: #757575;
+}
+
+/* サブタイトル・日付・説明 */
+.movie-subtitle, .movie-subtitle2, .movie-subtitle3, .movie-subtitle4,
+.movie-date, .movie-date2, .movie-date3, .movie-date4,
+.movie-description, .movie-description2, .movie-description3, .movie-description4 {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+/* 通知ボタン（共通） */
+.notify-btn, .notify-btn2, .notify-btn3, .notify-btn4 {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+  width: 80%;
+  transition: background-color 0.3s;
+}
+
+.notify-btn:hover, .notify-btn2:hover, .notify-btn3:hover, .notify-btn4:hover  {
+  background-color: #ccc;
+}
+/* フッターの基本スタイル */
+.footer {
+  background-color: #121212;  /* ダークグレーの背景 */
+  color: white;  /* 文字色を白に */
+  padding: 20px 0;  /* 上下の余白 */
+  text-align: center;  /* 中央揃え */
+}
+
+/* フッター内のコンテナ */
+.footer-container {
+  display: flex;
+  justify-content: space-between;  /* 左、中央、右に配置 */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;  /* コンテナを中央に配置 */
+}
+
+/* 左側（著作権など） */
+.footer-left p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* 中央のリンク */
+.footer-center ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.footer-center li {
+  margin: 0 15px;  /* リスト項目間のスペース */
+}
+
+.footer-center a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-center a:hover {
+  color: #ff7f50;  /* ホバー時に色が変わる */
+}
+
+/* 右側（ソーシャルメディアリンク） */
+.footer-right ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.footer-right li {
+  margin: 0 10px;
+}
+
+.footer-right a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer-right a:hover {
+  color: #ff7f50;  /* ホバー時に色が変わる */
+}

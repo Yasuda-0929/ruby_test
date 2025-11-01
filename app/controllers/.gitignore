@@ -1,0 +1,16 @@
+/log/*
+/tmp/*
+/storage/*
+!/log/.keep
+!/tmp/.keep
+
+/.bundle
+/vendor/bundle
+
+/node_modules
+.byebug_history
+
+.env
+*.swp
+.DS_Store
+/public/assets

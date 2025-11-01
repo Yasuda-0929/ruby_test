@@ -1,0 +1,97 @@
+body {
+    font-family: "Helvetica", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    color: #fff;
+  }
+  .header1 {
+    background-color: rgb(3, 3, 3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border: 1px solid rgb(108, 105, 105); /* 白い枠線を追加 */
+  }
+  .row1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1280px;
+  }
+  .title {
+    text-align: center;
+    font-size: 2rem;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px;
+  }
+  
+  .card {
+    background-color: #333;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+  }
+  
+  .image {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .info {
+    padding: 5px;
+  }
+  
+  .name {
+    font-size: 1.2rem;
+    margin: 0 0 8px;
+  }
+  
+  .desc {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #ccc;
+  }
+  
+  /* 背景画像（画像は自分で設置） */
+.pulpfiction .image       { background-image: url("パルプフィクション2.jpg");
+                            background-color: #2c1d1d; 
+                            background-position: top;}
+.prettywoman .image       { background-image: url("プリティーウーマン1.jpg"); background-color: #ffb6c1; }
+.poeticjustice .image     { background-image: url("poetic justice1.jpg"); background-color: #1a1a2e; }
+.fearloathing .image      { background-image: url('Fear and Loathing in Las Vegas1.jpg'); background-color: #ffe066; }
+.matrix .image            { background-image: url('The Matrix2.jpg');
+                            background-color: #0f0f0f;
+                            background-position: top; }
+.clueless .image          { background-image: url('Clueless2.jpg'); background-color: #ffccff; }
+.fightclub .image         { background-image: url('Fight Club1.jpg'); background-color: #ff3399; }
+.dazedconfused .image     { background-image: url('Dazed and Confused2.jpg'); background-color: #b8860b; }
+.thecraft .image          { background-image: url('The Craft1.jpg'); background-color: #2e2e2e; }
+.juice .image             { background-image: url('Juice1.jpg'); background-color: #111; }
+.doomgeneration .image    { background-image: url('The-Doom-Generation1.jpg');background-color: #8b0000; }
+.girlstown .image         { background-image: url('Girls-Town1.jpg'); background-color: #5a5a5a; }
+.devilwearsprada .image   { background-image: url('プラダを着た悪魔2.jpg'); background-color: #f5f5f5; }
+.mid90s .image            { background-image: url('mid90s2.jpg'); background-color: #87ceeb; }
+.snatch .image            { background-image: url('snatch1.jpg'); background-color: #d4af37; }
+.skatekitchen .image      { background-image: url('Skate Kitchen1.jpg'); background-color: #f08080; }
+.empirerecords .image     { background-image: url('empire records2.jpg');
+                            background-color: #4682b4;
+                            background-position: top }
+.trainspotting .image     { background-image: url('Trainspotting1.jpg'); background-color: #ff4500; }
+.ghostworld .image        { background-image: url('ghost world1.jpg'); background-color: #6495ed; }
+.eightmile .image         { background-image: url('8mile1.jpg'); background-color: #333; }
