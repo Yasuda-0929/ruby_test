@@ -36,7 +36,13 @@ group :test do
   gem "sass-rails"
   gem "guard-livereload"
 end
+# gem 'sqlite3' コメントアウトする（8行目付近）
 
+# SQLite3 → 開発用（37行目付近）
+group :development, :test do
+  gem 'sqlite3' # 追加
+  gem 'dotenv-rails' # 追加
+end
 # ←★ 本番だけ PostgreSQL を使う
 group :production do
   gem "pg"
